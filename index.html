@@ -65,8 +65,8 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
 }
 .sp-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);margin:14px auto 14px;opacity:0.5;position:relative;z-index:1;}
 .sp-intent{
-  font-size:clamp(0.75rem,2.5vw,0.9rem);color:rgba(255,255,255,0.95);
-  line-height:2;text-align:center;max-width:320px;font-style:normal;font-weight:400;
+  font-size:clamp(0.62rem,2vw,0.75rem);color:rgba(255,255,255,0.7);
+  line-height:1.95;text-align:center;max-width:300px;font-style:italic;font-weight:300;
   position:relative;z-index:1;
 }
 .sp-line{width:32px;height:1px;background:rgba(0,206,209,0.3);margin:28px auto;position:relative;z-index:1;}
@@ -129,8 +129,8 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
   text-shadow:0 0 24px rgba(0,206,209,0.35);margin-bottom:8px;
 }
 .hm-intent{
-  font-size:0.72rem;color:rgba(255,255,255,0.95);line-height:1.9;
-  font-style:normal;font-weight:400;max-width:320px;margin:0 auto 8px;text-align:center;
+  font-size:0.48rem;color:rgba(255,255,255,0.7);line-height:1.8;
+  font-style:italic;font-weight:300;max-width:320px;margin:0 auto 8px;text-align:center;
 }
   font-size:0.6rem;color:rgba(255,255,255,0.28);letter-spacing:2.5px;
   text-transform:uppercase;
@@ -180,7 +180,7 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
 .tb-brand{font-family:'Anton',sans-serif;font-size:0.78rem;letter-spacing:2px;color:var(--gold);}
 .sc{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:22px 20px 80px;}
 .sc-intent{
-  font-size:0.72rem;color:rgba(255,255,255,0.95);font-style:normal;
+  font-size:0.55rem;color:rgba(255,255,255,0.32);font-style:italic;
   line-height:1.85;text-align:center;margin-bottom:28px;
   padding:14px 16px;border:1px solid rgba(0,206,209,0.07);border-radius:12px;
 }
@@ -246,8 +246,8 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
   color:var(--gold);margin-bottom:5px;
 }
 #ftop-intent{
-  font-size:0.72rem;color:rgba(255,255,255,0.95);line-height:1.9;
-  font-style:normal;font-weight:400;max-width:340px;margin:0 auto;
+  font-size:0.48rem;color:rgba(255,255,255,0.75);line-height:1.7;
+  font-style:italic;font-weight:300;max-width:340px;margin:0 auto;
 }
 
 /* ── SEEK BAR (always visible bottom) ── */
@@ -306,8 +306,8 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
   color:rgba(255,255,255,0.5);margin-bottom:5px;
 }
 #mftop-intent{
-  font-size:0.72rem;color:rgba(255,255,255,0.95);line-height:1.9;
-  font-style:normal;font-weight:400;max-width:340px;margin:0 auto;
+  font-size:0.48rem;color:rgba(255,255,255,0.75);line-height:1.7;
+  font-style:italic;font-weight:300;max-width:340px;margin:0 auto;
 }
 #mfseekbar{
   position:absolute;bottom:0;left:0;right:0;z-index:60;
@@ -409,7 +409,7 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
 #srtop-back.show{opacity:1;}
 #srtop-back:active{color:var(--gold);}
 #srtop-brand{font-family:'Anton',sans-serif;font-size:0.85rem;letter-spacing:3px;color:var(--gold);margin-bottom:5px;}
-#srtop-intent{font-size:0.72rem;color:rgba(255,255,255,0.95);line-height:1.9;font-style:normal;font-weight:400;max-width:340px;margin:0 auto;}
+#srtop-intent{font-size:0.48rem;color:rgba(255,255,255,0.75);line-height:1.7;font-style:italic;font-weight:300;max-width:340px;margin:0 auto;}
 #srseekbar{position:absolute;bottom:0;left:0;right:0;z-index:60;padding:8px 16px 12px;background:linear-gradient(transparent,rgba(0,0,0,0.88));touch-action:none;opacity:0;pointer-events:none;transition:opacity 0.2s;}
 #srseekbar.show{opacity:1;pointer-events:auto;}
 #srseek-track{position:relative;height:4px;border-radius:2px;background:rgba(255,255,255,0.2);margin-bottom:5px;cursor:pointer;}
@@ -420,12 +420,27 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
 #srseek-pp{font-size:1.3rem;color:var(--gold);width:34px;height:34px;border-radius:50%;background:rgba(0,206,209,0.15);border:1px solid rgba(0,206,209,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation;}
 /* ───────── ANIME FEED ───────── */
 #animeFeed{position:fixed;inset:0;background:#000;overflow:hidden;display:none;touch-action:none;}
+#adultsFeed{position:fixed;inset:0;background:#000;overflow:hidden;display:none;touch-action:none;}
+#adtop{position:absolute;top:0;left:0;right:0;z-index:50;padding:14px 18px 12px;background:linear-gradient(rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.6) 80%,transparent 100%);pointer-events:none;text-align:center;}
+#adtop-back{position:absolute;top:14px;left:16px;font-family:'Anton',sans-serif;font-size:0.7rem;letter-spacing:2px;color:rgba(255,255,255,0.8);cursor:pointer;touch-action:manipulation;pointer-events:auto;padding:6px 4px;opacity:0;transition:opacity 0.2s;}
+#adtop-back.show{opacity:1;}
+#adtop-back:active{color:var(--gold);}
+#adtop-brand{font-family:'Anton',sans-serif;font-size:0.85rem;letter-spacing:3px;color:var(--gold);margin-bottom:5px;}
+#adtop-intent{font-size:0.72rem;color:rgba(255,255,255,0.95);line-height:1.9;font-style:normal;font-weight:400;max-width:340px;margin:0 auto;}
+#adseekbar{position:absolute;bottom:0;left:0;right:0;z-index:60;padding:8px 16px 12px;background:linear-gradient(transparent,rgba(0,0,0,0.88));touch-action:none;opacity:0;pointer-events:none;transition:opacity 0.2s;}
+#adseekbar.show{opacity:1;pointer-events:auto;}
+#adseek-track{position:relative;height:4px;border-radius:2px;background:rgba(255,255,255,0.2);margin-bottom:5px;cursor:pointer;}
+#adseek-fill{position:absolute;left:0;top:0;bottom:0;width:0%;background:var(--gold);border-radius:2px;pointer-events:none;}
+#adseek-thumb{position:absolute;top:50%;left:0%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px var(--gold);pointer-events:none;}
+#adseek-times{display:flex;justify-content:space-between;align-items:center;font-family:'Anton',sans-serif;font-size:0.5rem;color:rgba(255,255,255,0.6);letter-spacing:1px;pointer-events:auto;}
+#adseek-btns{display:flex;align-items:center;gap:18px;}
+#adseek-pp{font-size:1.3rem;color:var(--gold);width:34px;height:34px;border-radius:50%;background:rgba(0,206,209,0.15);border:1px solid rgba(0,206,209,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation;}
 #antop{position:absolute;top:0;left:0;right:0;z-index:50;padding:14px 18px 12px;background:linear-gradient(rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.6) 80%,transparent 100%);pointer-events:none;text-align:center;}
 #antop-back{position:absolute;top:14px;left:16px;font-family:'Anton',sans-serif;font-size:0.7rem;letter-spacing:2px;color:rgba(255,255,255,0.8);cursor:pointer;touch-action:manipulation;pointer-events:auto;padding:6px 4px;opacity:0;transition:opacity 0.2s;}
 #antop-back.show{opacity:1;}
 #antop-back:active{color:var(--gold);}
 #antop-brand{font-family:'Anton',sans-serif;font-size:0.85rem;letter-spacing:3px;color:var(--gold);margin-bottom:5px;}
-#antop-intent{font-size:0.72rem;color:rgba(255,255,255,0.95);line-height:1.9;font-style:normal;font-weight:400;max-width:340px;margin:0 auto;}
+#antop-intent{font-size:0.48rem;color:rgba(255,255,255,0.75);line-height:1.7;font-style:italic;font-weight:300;max-width:340px;margin:0 auto;}
 #aseekbar{position:absolute;bottom:0;left:0;right:0;z-index:60;padding:8px 16px 12px;background:linear-gradient(transparent,rgba(0,0,0,0.88));touch-action:none;opacity:0;pointer-events:none;transition:opacity 0.2s;}
 #aseekbar.show{opacity:1;pointer-events:auto;}
 #aseek-track{position:relative;height:4px;border-radius:2px;background:rgba(255,255,255,0.2);margin-bottom:5px;cursor:pointer;}
@@ -445,7 +460,7 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
 #mstop-back.show{opacity:1;}
 #mstop-back:active{color:var(--gold);}
 #mstop-brand{font-family:'Anton',sans-serif;font-size:0.85rem;letter-spacing:3px;color:var(--gold);margin-bottom:5px;}
-#mstop-intent{font-size:0.72rem;color:rgba(255,255,255,0.95);line-height:1.9;font-style:normal;font-weight:400;max-width:340px;margin:0 auto;}
+#mstop-intent{font-size:0.48rem;color:rgba(255,255,255,0.75);line-height:1.7;font-style:italic;font-weight:300;max-width:340px;margin:0 auto;}
 #msseekbar{position:absolute;bottom:0;left:0;right:0;z-index:60;padding:8px 16px 12px;background:linear-gradient(transparent,rgba(0,0,0,0.88));touch-action:none;opacity:0;pointer-events:none;transition:opacity 0.2s;}
 #msseekbar.show{opacity:1;pointer-events:auto;}
 #msseek-track{position:relative;height:4px;border-radius:2px;background:rgba(255,255,255,0.2);margin-bottom:5px;cursor:pointer;}
@@ -532,6 +547,12 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
       
       <div class="hm-text">
         <div class="hm-card-title">Mathieu Pichette.co Anime</div>
+      </div>
+      <div class="hm-arrow">›</div>
+    </div>
+    <div class="hm-card" id="goAdults">
+      <div class="hm-text">
+        <div class="hm-card-title">Mathieu Pichette.co Adults Only</div>
       </div>
       <div class="hm-arrow">›</div>
     </div>
@@ -682,6 +703,41 @@ From 0 to hero, from hell to paradise —<br>the world will be shaped by people 
         </div>
       </div>
       <span id="aseek-dur">0:00</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── ADULTS ONLY FEED ── -->
+<div id="adultsFeed">
+  <div id="adtop">
+    <div id="adtop-back" onclick="
+      document.getElementById('adultsFeed').style.display='none';
+      document.getElementById('home').style.display='flex';
+      adSlides.forEach(function(s){ var v=s.querySelector('video'); if(v) v.pause(); });
+      adHideBar();
+    ">← MENU</div>
+    <div id="adtop-brand">Mathieu Pichette.co Adults Only</div>
+    <div id="adtop-intent">This is my personal evolution space. Every moment here, I evolve — personally, at my best. Only me. Only my evolution. My evolution in every form, every sphere, 100% evolution again and again. My evolution only. Yes — my evolution, here, now and eternally, at my best.</div>
+  </div>
+  <div id="adseekbar">
+    <div id="adseek-track">
+      <div id="adseek-fill"></div>
+      <div id="adseek-thumb"></div>
+    </div>
+    <div id="adseek-times">
+      <span id="adseek-cur">0:00</span>
+      <div id="adseek-btns">
+        <div id="adov-back" class="fseek-btn">
+          <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+          <span>10s</span>
+        </div>
+        <div id="adseek-pp" class="fseek-btn">▶</div>
+        <div id="adov-fwd" class="fseek-btn">
+          <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+          <span>10s</span>
+        </div>
+      </div>
+      <span id="adseek-dur">0:00</span>
     </div>
   </div>
 </div>
@@ -2108,6 +2164,51 @@ aseekTrack.addEventListener('touchstart',function(e){var rect=aseekTrack.getBoun
 aseekTrack.addEventListener('touchmove',function(e){var rect=aseekTrack.getBoundingClientRect();var pct=Math.max(0,Math.min(1,(e.touches[0].clientX-rect.left)/rect.width));var v=anGetVideo(anCurrent);if(v&&v.duration)v.currentTime=pct*v.duration;e.stopPropagation();},{passive:true});
 setInterval(function(){if(!window.anstarted)return;var v=anGetVideo(anCurrent);if(!v||!v.duration)return;var pct=v.currentTime/v.duration;aseekFill.style.width=(pct*100)+'%';aseekThumb.style.left=(pct*100)+'%';aseekCur.textContent=fmtTime(v.currentTime);aseekDur.textContent=fmtTime(v.duration);aseekPP.textContent=v.paused?'▶':'⏸';},250);
 document.getElementById('goAnime').addEventListener('click',function(){hide('home');stopAll();animeFeed.style.display='block';if(!window.anstarted){window.anstarted=true;buildAnimeFeed();}else{var v=anGetVideo(anCurrent);if(v){v.muted=false;v.play().catch(function(){});}}});
+
+// ── ADULTS ONLY SECTION ──
+var ADULTS_VIDEOS=[];
+var adultsFeed=document.getElementById('adultsFeed');
+var adseekbar=document.getElementById('adseekbar');
+var adTopBack=document.getElementById('adtop-back');
+var adseekFill=document.getElementById('adseek-fill');
+var adseekThumb=document.getElementById('adseek-thumb');
+var adseekCur=document.getElementById('adseek-cur');
+var adseekDur=document.getElementById('adseek-dur');
+var adseekPP=document.getElementById('adseek-pp');
+var adseekTrack=document.getElementById('adseek-track');
+var adBarTimer=null;
+var adCurrent=0;
+var adList=[];
+var adSlides=[];
+var adSettling=false;
+var adTStartY=0;
+var adDragging=false;
+window.adstarted=false;
+
+function adShowBar(){adseekbar.classList.add('show');adTopBack.classList.add('show');clearTimeout(adBarTimer);adBarTimer=setTimeout(function(){adseekbar.classList.remove('show');adTopBack.classList.remove('show');},3000);}
+function adHideBar(){clearTimeout(adBarTimer);adseekbar.classList.remove('show');adTopBack.classList.remove('show');}
+function adUpdatePlayIcon(){var v=adGetVideo(adCurrent);adseekPP.textContent=(!v||v.paused)?'▶':'⏸';}
+function adGetSlide(i){return adSlides[i]||null;}
+function adGetVideo(i){return adSlides[i]?adSlides[i].querySelector('video'):null;}
+function adSetPos(el,vh){el.style.transition='none';el.style.transform='translateY('+vh+'vh)';}
+function adSetPosPx(el,px){el.style.transition='none';el.style.transform='translateY('+px+'px)';}
+function adAnimateTo(el,vh,cb){el.style.transition='transform 0.38s cubic-bezier(0.16,1,0.3,1)';el.style.transform='translateY('+vh+'vh)';if(cb){var done=function(){el.removeEventListener('transitionend',done);cb();};el.addEventListener('transitionend',done);}}
+function adSeekRel(sec){var v=adGetVideo(adCurrent);if(!v||!v.duration)return;v.currentTime=Math.min(Math.max(0,v.currentTime+sec),v.duration);}
+function adPlayVideo(idx){for(var i=0;i<adSlides.length;i++){var ov=adGetVideo(i);if(ov&&i!==idx)ov.pause();}var v=adGetVideo(idx);if(v){if(!v.src){v.src=adList[idx].url;v.preload='auto';v.load();}v.play().catch(function(){});}}
+function buildAdultsFeed(){adSlides.forEach(function(s){s.remove();});adSlides=[];adList=shuffle(ADULTS_VIDEOS);adCurrent=0;adList.forEach(function(vid,idx){var slide=document.createElement('div');slide.className='slide';var video=document.createElement('video');video.setAttribute('playsinline','');video.setAttribute('webkit-playsinline','');video.setAttribute('preload','none');video.muted=false;video.loop=true;slide.appendChild(video);adultsFeed.appendChild(slide);adSlides.push(slide);adSetPos(slide,idx===0?0:100);});if(adList.length>0){var v=adGetVideo(0);if(v){v.src=adList[0].url;v.preload='auto';v.load();v.play().catch(function(){});}}}
+
+adultsFeed.addEventListener('touchstart',function(e){if(adSettling||!window.adstarted)return;if(e.target.closest&&e.target.closest('#adseekbar'))return;adTStartY=e.touches[0].clientY;adDragging=true;var ns=adGetSlide(adCurrent+1);if(ns)adSetPos(ns,-100);},{passive:true});
+adultsFeed.addEventListener('touchmove',function(e){if(!adDragging||adSettling)return;if(e.target.closest&&e.target.closest('#adseekbar'))return;var dy=e.touches[0].clientY-adTStartY;if(dy<=0){var cs=adGetSlide(adCurrent);if(cs)adSetPos(cs,0);return;}var cs=adGetSlide(adCurrent);var ns=adGetSlide(adCurrent+1);if(cs)adSetPosPx(cs,dy);if(ns)adSetPosPx(ns,dy-window.innerHeight);},{passive:true});
+adultsFeed.addEventListener('touchend',function(e){if(!adDragging)return;adDragging=false;var dy=e.changedTouches[0].clientY-adTStartY;if(dy>80&&adCurrent<adList.length-1){adSettling=true;adCurrent++;adHideBar();var prev=adGetSlide(adCurrent-1);var next=adGetSlide(adCurrent);if(prev)adAnimateTo(prev,100,null);if(next){adAnimateTo(next,0,function(){adSettling=false;adPlayVideo(adCurrent);});}else{adSettling=false;adPlayVideo(adCurrent);}}else{var cs=adGetSlide(adCurrent);var ns=adGetSlide(adCurrent+1);if(cs)adAnimateTo(cs,0,null);if(ns)adAnimateTo(ns,-100,null);}},{passive:true});
+document.addEventListener('touchmove',function(e){if(adultsFeed.style.display==='block'&&window.adstarted)e.preventDefault();},{passive:false});
+adultsFeed.addEventListener('click',function(e){if(adseekbar.classList.contains('show')){adHideBar();}else{adUpdatePlayIcon();adShowBar();}});
+adseekPP.addEventListener('click',function(e){e.stopPropagation();var v=adGetVideo(adCurrent);if(!v)return;if(v.paused){v.play().catch(function(){});}else{v.pause();}adUpdatePlayIcon();clearTimeout(adBarTimer);adBarTimer=setTimeout(function(){adseekbar.classList.remove('show');adTopBack.classList.remove('show');},3000);});
+document.getElementById('adov-back').addEventListener('click',function(e){e.stopPropagation();adSeekRel(-10);clearTimeout(adBarTimer);adBarTimer=setTimeout(function(){adseekbar.classList.remove('show');adTopBack.classList.remove('show');},3000);});
+document.getElementById('adov-fwd').addEventListener('click',function(e){e.stopPropagation();adSeekRel(10);clearTimeout(adBarTimer);adBarTimer=setTimeout(function(){adseekbar.classList.remove('show');adTopBack.classList.remove('show');},3000);});
+adseekTrack.addEventListener('touchstart',function(e){var rect=adseekTrack.getBoundingClientRect();var pct=Math.max(0,Math.min(1,(e.touches[0].clientX-rect.left)/rect.width));var v=adGetVideo(adCurrent);if(v&&v.duration)v.currentTime=pct*v.duration;e.stopPropagation();},{passive:true});
+adseekTrack.addEventListener('touchmove',function(e){var rect=adseekTrack.getBoundingClientRect();var pct=Math.max(0,Math.min(1,(e.touches[0].clientX-rect.left)/rect.width));var v=adGetVideo(adCurrent);if(v&&v.duration)v.currentTime=pct*v.duration;e.stopPropagation();},{passive:true});
+setInterval(function(){if(!window.adstarted)return;var v=adGetVideo(adCurrent);if(!v||!v.duration)return;var pct=v.currentTime/v.duration;adseekFill.style.width=(pct*100)+'%';adseekThumb.style.left=(pct*100)+'%';adseekCur.textContent=fmtTime(v.currentTime);adseekDur.textContent=fmtTime(v.duration);adseekPP.textContent=v.paused?'▶':'⏸';},250);
+document.getElementById('goAdults').addEventListener('click',function(){hide('home');stopAll();adultsFeed.style.display='block';if(!window.adstarted){window.adstarted=true;buildAdultsFeed();}else{var v=adGetVideo(adCurrent);if(v){v.muted=false;v.play().catch(function(){});}}});
 
 // Précharge la 1ère vidéo de chaque section dès que l'app ouvre
 (function(){
