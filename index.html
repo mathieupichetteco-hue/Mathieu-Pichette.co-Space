@@ -84,8 +84,8 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
 /* ───────── HOME ───────── */
 #home{
   position:fixed;inset:0;z-index:2000;background:#000;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:32px 24px;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;
+  padding:0;overflow:hidden;
 }
 .hm-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
 .hm-line-h{
@@ -104,7 +104,10 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
 .hm-corner-tr{top:24px;right:24px;border-width:1px 1px 0 0;}
 .hm-corner-bl{bottom:24px;left:24px;border-width:0 0 1px 1px;}
 .hm-corner-br{bottom:24px;right:24px;border-width:0 1px 1px 0;}
-.hm-top{text-align:center;margin-bottom:32px;position:relative;z-index:1;}
+.hm-top{
+  text-align:center;padding:36px 24px 20px;
+  position:relative;z-index:1;width:100%;flex-shrink:0;
+}
 .hm-logo-wrap{margin-bottom:14px;}
 .hm-tri{
   width:0;height:0;
@@ -126,16 +129,22 @@ html,body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow:h
 .hm-brand{
   font-family:'Anton',sans-serif;font-size:clamp(1.2rem,4.5vw,1.6rem);
   letter-spacing:4px;color:var(--gold);
-  text-shadow:0 0 24px rgba(0,206,209,0.35);margin-bottom:8px;
+  text-shadow:0 0 24px rgba(0,206,209,0.35);margin-bottom:12px;
 }
 .hm-intent{
   font-size:0.82rem;color:#ffffff;line-height:1.9;
-  font-style:normal;font-weight:500;max-width:320px;margin:0 auto 8px;text-align:center;
+  font-style:normal;font-weight:500;max-width:340px;margin:0 auto 0;text-align:center;
 }
   font-size:0.6rem;color:rgba(255,255,255,0.28);letter-spacing:2.5px;
   text-transform:uppercase;
 }
-.hm-cards{display:flex;flex-direction:column;gap:12px;width:100%;max-width:360px;position:relative;z-index:1;}
+.hm-cards{
+  display:flex;flex-direction:column;gap:12px;
+  width:100%;max-width:380px;
+  position:relative;z-index:1;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  padding:20px 24px 40px;flex:1;
+}
 .hm-card{
   display:flex;align-items:center;gap:16px;
   padding:20px 20px;border-radius:16px;
